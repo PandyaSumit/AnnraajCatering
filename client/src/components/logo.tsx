@@ -15,69 +15,105 @@ export default function Logo({ className = "w-12 h-12", size = 'medium' }: LogoP
   return (
     <svg 
       className={finalClassName}
-      viewBox="0 0 80 80" 
+      viewBox="0 0 100 100" 
       fill="none" 
       xmlns="http://www.w3.org/2000/svg"
     >
-      {/* Background circle with gradient */}
       <defs>
-        <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stopColor="#D97706" />
-          <stop offset="100%" stopColor="#B45309" />
-        </linearGradient>
-        <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+        {/* Main gradient for background */}
+        <radialGradient id="mainGradient" cx="50%" cy="30%" r="70%">
           <stop offset="0%" stopColor="#F59E0B" />
-          <stop offset="100%" stopColor="#FBBF24" />
+          <stop offset="50%" stopColor="#D97706" />
+          <stop offset="100%" stopColor="#B45309" />
+        </radialGradient>
+        
+        {/* Accent gradient for elements */}
+        <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#FCD34D" />
+          <stop offset="100%" stopColor="#F59E0B" />
         </linearGradient>
-        <linearGradient id="whiteGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stopColor="#ffffff" />
-          <stop offset="100%" stopColor="#f8fafc" />
+        
+        {/* Thali gradient */}
+        <radialGradient id="thaliGradient" cx="50%" cy="50%" r="80%">
+          <stop offset="0%" stopColor="#FFFFFF" />
+          <stop offset="60%" stopColor="#FEF3C7" />
+          <stop offset="100%" stopColor="#D97706" />
+        </radialGradient>
+        
+        {/* Steam effect */}
+        <linearGradient id="steamGradient" x1="0%" y1="100%" x2="0%" y2="0%">
+          <stop offset="0%" stopColor="#FEF3C7" stopOpacity="0.9" />
+          <stop offset="50%" stopColor="#FBBF24" stopOpacity="0.5" />
+          <stop offset="100%" stopColor="#FFFFFF" stopOpacity="0.2" />
         </linearGradient>
+        
+        {/* Food gradient */}
+        <radialGradient id="foodGradient" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stopColor="#FBBF24" />
+          <stop offset="100%" stopColor="#F59E0B" />
+        </radialGradient>
       </defs>
       
-      {/* Main background circle */}
-      <circle cx="40" cy="40" r="38" fill="url(#logoGradient)" stroke="#FBBF24" strokeWidth="2" />
+      {/* Outer decorative ring with traditional pattern */}
+      <circle cx="50" cy="50" r="48" fill="url(#mainGradient)" stroke="#FBBF24" strokeWidth="2" />
       
-      {/* Traditional pot/vessel shape */}
+      {/* Traditional mandala-style border */}
+      <circle cx="50" cy="50" r="42" fill="none" stroke="#FCD34D" strokeWidth="1" opacity="0.4" strokeDasharray="3,2" />
+      
+      {/* Traditional Thali (serving plate) */}
+      <circle cx="50" cy="50" r="35" fill="url(#thaliGradient)" stroke="#D97706" strokeWidth="2" />
+      
+      {/* Inner rim of thali */}
+      <circle cx="50" cy="50" r="32" fill="none" stroke="#F59E0B" strokeWidth="1" opacity="0.6" />
+      
+      {/* Multiple small bowls (katori) arranged in traditional thali style */}
+      <circle cx="38" cy="40" r="6" fill="url(#foodGradient)" stroke="#D97706" strokeWidth="1" />
+      <circle cx="62" cy="40" r="6" fill="url(#foodGradient)" stroke="#D97706" strokeWidth="1" />
+      <circle cx="42" cy="60" r="5" fill="url(#foodGradient)" stroke="#D97706" strokeWidth="1" />
+      <circle cx="58" cy="60" r="5" fill="url(#foodGradient)" stroke="#D97706" strokeWidth="1" />
+      
+      {/* Central main course area */}
+      <circle cx="50" cy="50" r="8" fill="url(#foodGradient)" stroke="#B45309" strokeWidth="1.5" />
+      
+      {/* Roti/Chapati representation */}
+      <ellipse cx="35" cy="55" rx="4" ry="3" fill="#FEF3C7" stroke="#F59E0B" strokeWidth="1" />
+      
+      {/* Rice representation */}
+      <ellipse cx="65" cy="55" rx="4" ry="3" fill="#FFFFFF" stroke="#E5E7EB" strokeWidth="1" />
+      
+      {/* Steam rising from hot food */}
+      <path d="M46 35 Q48 25 46 15" stroke="url(#steamGradient)" strokeWidth="1.5" fill="none" strokeLinecap="round" opacity="0.7" />
+      <path d="M50 33 Q52 23 50 13" stroke="url(#steamGradient)" strokeWidth="1.5" fill="none" strokeLinecap="round" opacity="0.8" />
+      <path d="M54 35 Q52 25 54 15" stroke="url(#steamGradient)" strokeWidth="1.5" fill="none" strokeLinecap="round" opacity="0.7" />
+      
+      {/* Traditional spices as decorative elements */}
+      <circle cx="20" cy="25" r="1.5" fill="#DC2626" opacity="0.9" /> {/* Red chili powder */}
+      <circle cx="80" cy="25" r="1.5" fill="#CA8A04" opacity="0.9" /> {/* Turmeric */}
+      <circle cx="22" cy="75" r="1.5" fill="#65A30D" opacity="0.9" /> {/* Green coriander */}
+      <circle cx="78" cy="75" r="1.5" fill="#7C2D12" opacity="0.9" /> {/* Cumin */}
+      
+      {/* Stylized 'A' for Annraaj integrated into the design */}
       <path 
-        d="M25 35 C25 30, 30 28, 40 28 C50 28, 55 30, 55 35 L55 50 C55 55, 50 58, 40 58 C30 58, 25 55, 25 50 Z" 
-        fill="url(#whiteGradient)" 
-        opacity="0.95"
-        stroke="#F59E0B"
-        strokeWidth="1"
-      />
-      
-      {/* Pot rim/handle details */}
-      <ellipse cx="40" cy="30" rx="13" ry="3" fill="url(#accentGradient)" />
-      <rect x="22" y="33" width="4" height="8" rx="2" fill="url(#accentGradient)" />
-      <rect x="54" y="33" width="4" height="8" rx="2" fill="url(#accentGradient)" />
-      
-      {/* Traditional decorative patterns */}
-      <circle cx="40" cy="40" r="2.5" fill="url(#accentGradient)" />
-      <path d="M32 44 Q40 41 48 44" stroke="url(#accentGradient)" strokeWidth="1.5" fill="none" />
-      <path d="M30 48 Q40 45 50 48" stroke="url(#accentGradient)" strokeWidth="1.5" fill="none" />
-      
-      {/* Letter 'A' stylized - representing Annraaj */}
-      <path 
-        d="M35 52 L40 38 L45 52 M37 47 L43 47" 
-        stroke="#B45309" 
+        d="M47 55 L50 42 L53 55 M48 51 L52 51" 
+        stroke="#FFFFFF" 
         strokeWidth="2.5" 
         strokeLinecap="round" 
         strokeLinejoin="round" 
         fill="none"
+        opacity="0.9"
       />
       
-      {/* Decorative spice/grain dots around the circle */}
-      <circle cx="40" cy="12" r="1.5" fill="url(#accentGradient)" />
-      <circle cx="40" cy="68" r="1.5" fill="url(#accentGradient)" />
-      <circle cx="12" cy="40" r="1.5" fill="url(#accentGradient)" />
-      <circle cx="68" cy="40" r="1.5" fill="url(#accentGradient)" />
+      {/* Traditional paisley patterns around the border */}
+      <path d="M15 45 Q12 50 15 55 Q18 50 15 45" fill="#FCD34D" opacity="0.6" />
+      <path d="M85 45 Q88 50 85 55 Q82 50 85 45" fill="#FCD34D" opacity="0.6" />
+      <path d="M45 15 Q50 12 55 15 Q50 18 45 15" fill="#FCD34D" opacity="0.6" />
+      <path d="M45 85 Q50 88 55 85 Q50 82 45 85" fill="#FCD34D" opacity="0.6" />
       
-      {/* Additional traditional elements */}
-      <circle cx="20" cy="20" r="1" fill="url(#accentGradient)" opacity="0.7" />
-      <circle cx="60" cy="20" r="1" fill="url(#accentGradient)" opacity="0.7" />
-      <circle cx="20" cy="60" r="1" fill="url(#accentGradient)" opacity="0.7" />
-      <circle cx="60" cy="60" r="1" fill="url(#accentGradient)" opacity="0.7" />
+      {/* Corner decorative elements */}
+      <circle cx="25" cy="25" r="1" fill="#FBBF24" opacity="0.8" />
+      <circle cx="75" cy="25" r="1" fill="#FBBF24" opacity="0.8" />
+      <circle cx="25" cy="75" r="1" fill="#FBBF24" opacity="0.8" />
+      <circle cx="75" cy="75" r="1" fill="#FBBF24" opacity="0.8" />
     </svg>
   );
 }
