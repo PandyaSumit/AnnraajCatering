@@ -21,7 +21,7 @@ export default function About() {
             </h3>
             
             <p className="text-lg text-gray-700 leading-relaxed">
-              For over 15 years, AnnRaaj Catering Services has been the trusted name for authentic Gujarati and Indian cuisine in Surat. We pride ourselves on preserving traditional cooking methods while meeting modern presentation standards.
+              For over 32 years, AnnRaaj Catering Services has been the trusted name for authentic Gujarati and Indian cuisine in Surat. We pride ourselves on preserving traditional cooking methods while meeting modern presentation standards.
             </p>
             
             <p className="text-lg text-gray-700 leading-relaxed">

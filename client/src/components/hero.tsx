@@ -34,11 +34,11 @@ export default function Hero() {
           </h1>
           
           <p className="text-xl lg:text-2xl text-gray-700 mb-4 font-medium">
-            Serving Taste & Tradition Since 2008
+            Serving Taste & Tradition Since 1992
           </p>
           
           <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-            Experience authentic Gujarati flavors and traditional Indian cuisine crafted with love and expertise for over 15 years in Surat.
+            Experience authentic Gujarati flavors and traditional Indian cuisine crafted with love and expertise for over 32 years in Surat.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -65,7 +65,7 @@ export default function Hero() {
               <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-2">
                 <Award className="text-primary w-8 h-8" />
               </div>
-              <span className="text-2xl font-bold text-gray-800">15+</span>
+              <span className="text-2xl font-bold text-gray-800">32+</span>
               <span className="text-gray-600">Years Experience</span>
             </div>
             

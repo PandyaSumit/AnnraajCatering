@@ -98,6 +98,7 @@ This is a modern full-stack web application for AnnRaaj Catering Services, a tra
 Changelog:
 - June 29, 2025: Initial setup
 - June 29, 2025: Updated business information - changed name to AnnRaaj (capital R), updated phone to 9879381605, changed location from Ahmedabad to Ved Road, Surat, Gujarat 395004
+- June 29, 2025: Updated founding year from 2008 to 1992, changed experience from 15+ to 32+ years throughout website
 
 ## User Preferences
 

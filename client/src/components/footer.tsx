@@ -19,7 +19,7 @@ export default function Footer() {
               <h3 className="text-xl font-bold">AnnRaaj Catering</h3>
             </div>
             <p className="text-gray-300 mb-4">
-              Serving authentic Gujarati and Indian cuisine with love and tradition for over 15 years in Surat.
+              Serving authentic Gujarati and Indian cuisine with love and tradition for over 32 years in Surat.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-300 hover:text-primary transition-colors">
@@ -104,7 +104,7 @@ export default function Footer() {
             <p className="text-2xl font-semibold text-primary mb-2">Har Har Mahadev 🙏</p>
           </div>
           <p className="text-gray-400">
-            © 2024 AnnRaaj Catering Services. All rights reserved. | Proudly serving Surat since 2008
+            © 2024 AnnRaaj Catering Services. All rights reserved. | Proudly serving Surat since 1992
           </p>
         </div>
       </div>
