@@ -21,7 +21,7 @@ export default function Header() {
           <div className="flex items-center space-x-3">
             <Logo className="w-12 h-12" />
             <div>
-              <h1 className="text-2xl font-bold text-gray-800">Annraaj</h1>
+              <h1 className="text-2xl font-bold text-gray-800">AnnRaaj</h1>
               <p className="text-sm text-gray-600">Catering Services</p>
             </div>
           </div>

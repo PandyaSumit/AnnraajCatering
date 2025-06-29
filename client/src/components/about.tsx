@@ -6,7 +6,7 @@ export default function About() {
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-800 mb-4">
-            About <span className="text-primary">Annraaj</span>
+            About <span className="text-primary">AnnRaaj</span>
           </h2>
           <div className="w-24 h-1 bg-primary mx-auto mb-6"></div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -21,7 +21,7 @@ export default function About() {
             </h3>
             
             <p className="text-lg text-gray-700 leading-relaxed">
-              For over 15 years, Annraaj Catering Services has been the trusted name for authentic Gujarati and Indian cuisine in Ahmedabad. We pride ourselves on preserving traditional cooking methods while meeting modern presentation standards.
+              For over 15 years, AnnRaaj Catering Services has been the trusted name for authentic Gujarati and Indian cuisine in Surat. We pride ourselves on preserving traditional cooking methods while meeting modern presentation standards.
             </p>
             
             <p className="text-lg text-gray-700 leading-relaxed">
@@ -61,7 +61,7 @@ export default function About() {
                 </div>
               </div>
               <p className="text-sm text-gray-700">
-                "Annraaj made our wedding absolutely perfect! The authentic flavors brought back childhood memories."
+                "AnnRaaj made our wedding absolutely perfect! The authentic flavors brought back childhood memories."
               </p>
             </div>
           </div>

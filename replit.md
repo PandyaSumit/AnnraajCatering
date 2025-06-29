@@ -1,8 +1,8 @@
-# Annraaj Catering Services - Full-Stack Web Application
+# AnnRaaj Catering Services - Full-Stack Web Application
 
 ## Overview
 
-This is a modern full-stack web application for Annraaj Catering Services, a traditional Gujarati and Indian catering company based in Ahmedabad. The application serves as a business website showcasing their services, gallery, and contact information with a focus on authentic cultural presentation and user experience.
+This is a modern full-stack web application for AnnRaaj Catering Services, a traditional Gujarati and Indian catering company based in Surat. The application serves as a business website showcasing their services, gallery, and contact information with a focus on authentic cultural presentation and user experience.
 
 ## System Architecture
 
@@ -96,7 +96,8 @@ This is a modern full-stack web application for Annraaj Catering Services, a tra
 ## Changelog
 
 Changelog:
-- June 29, 2025. Initial setup
+- June 29, 2025: Initial setup
+- June 29, 2025: Updated business information - changed name to AnnRaaj (capital R), updated phone to 9879381605, changed location from Ahmedabad to Ved Road, Surat, Gujarat 395004
 
 ## User Preferences
 

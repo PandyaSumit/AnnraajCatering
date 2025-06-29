@@ -45,11 +45,11 @@ export default function Contact() {
   };
 
   const handleCallNow = () => {
-    window.open('tel:+919876543210', '_self');
+    window.open('tel:+919879381605', '_self');
   };
 
   const handleWhatsApp = () => {
-    window.open('https://wa.me/919876543210', '_blank');
+    window.open('https://wa.me/919879381605', '_blank');
   };
 
   return (
@@ -76,8 +76,8 @@ export default function Contact() {
               <div>
                 <h4 className="font-semibold text-gray-800 text-lg">Phone Number</h4>
                 <p className="text-gray-600 mb-2">Call us for immediate assistance</p>
-                <a href="tel:+919876543210" className="text-primary font-semibold text-lg hover:text-secondary transition-colors">
-                  +91 98765 43210
+                <a href="tel:+919879381605" className="text-primary font-semibold text-lg hover:text-secondary transition-colors">
+                  +91 98793 81605
                 </a>
               </div>
             </div>
@@ -103,8 +103,8 @@ export default function Contact() {
                 <h4 className="font-semibold text-gray-800 text-lg">Location</h4>
                 <p className="text-gray-600 mb-2">Visit our kitchen</p>
                 <p className="text-primary font-semibold text-lg">
-                  Maninagar, Ahmedabad,<br />
-                  Gujarat 380008
+                  Ved Road, Surat,<br />
+                  Gujarat 395004
                 </p>
               </div>
             </div>
@@ -147,7 +147,7 @@ export default function Contact() {
                     type="tel"
                     value={formData.phone}
                     onChange={(e) => setFormData({...formData, phone: e.target.value})}
-                    placeholder="+91 98765 43210"
+                    placeholder="+91 98793 81605"
                     required
                   />
                 </div>

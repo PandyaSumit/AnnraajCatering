@@ -16,10 +16,10 @@ export default function Footer() {
           <div>
             <div className="flex items-center space-x-3 mb-4">
               <Logo className="w-10 h-10" />
-              <h3 className="text-xl font-bold">Annraaj Catering</h3>
+              <h3 className="text-xl font-bold">AnnRaaj Catering</h3>
             </div>
             <p className="text-gray-300 mb-4">
-              Serving authentic Gujarati and Indian cuisine with love and tradition for over 15 years in Ahmedabad.
+              Serving authentic Gujarati and Indian cuisine with love and tradition for over 15 years in Surat.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-300 hover:text-primary transition-colors">
@@ -85,7 +85,7 @@ export default function Footer() {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <span className="text-primary">📞</span>
-                <span className="text-gray-300">+91 98765 43210</span>
+                <span className="text-gray-300">+91 98793 81605</span>
               </div>
               <div className="flex items-center space-x-3">
                 <span className="text-primary">✉️</span>
@@ -93,7 +93,7 @@ export default function Footer() {
               </div>
               <div className="flex items-start space-x-3">
                 <span className="text-primary">📍</span>
-                <span className="text-gray-300">Maninagar, Ahmedabad, Gujarat 380008</span>
+                <span className="text-gray-300">Ved Road, Surat, Gujarat 395004</span>
               </div>
             </div>
           </div>
@@ -104,7 +104,7 @@ export default function Footer() {
             <p className="text-2xl font-semibold text-primary mb-2">Har Har Mahadev 🙏</p>
           </div>
           <p className="text-gray-400">
-            © 2024 Annraaj Catering Services. All rights reserved. | Proudly serving Ahmedabad since 2008
+            © 2024 AnnRaaj Catering Services. All rights reserved. | Proudly serving Surat since 2008
           </p>
         </div>
       </div>

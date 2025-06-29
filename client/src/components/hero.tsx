@@ -4,7 +4,7 @@ import Logo from "@/components/logo";
 
 export default function Hero() {
   const handleCallNow = () => {
-    window.open('tel:+919876543210', '_self');
+    window.open('tel:+919879381605', '_self');
   };
 
   const scrollToContact = () => {
@@ -28,7 +28,7 @@ export default function Hero() {
             <Logo className="w-24 h-24 lg:w-32 lg:h-32" />
           </div>
           <h1 className="text-5xl lg:text-7xl font-bold text-gray-800 mb-6">
-            <span className="text-primary">Annraaj</span> Catering
+            <span className="text-primary">AnnRaaj</span> Catering
             <br />
             <span className="text-secondary">Services</span>
           </h1>
@@ -38,7 +38,7 @@ export default function Hero() {
           </p>
           
           <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-            Experience authentic Gujarati flavors and traditional Indian cuisine crafted with love and expertise for over 15 years in Ahmedabad.
+            Experience authentic Gujarati flavors and traditional Indian cuisine crafted with love and expertise for over 15 years in Surat.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
