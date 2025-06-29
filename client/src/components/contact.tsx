@@ -16,7 +16,7 @@ export default function Contact() {
     message: ''
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     if (!formData.name || !formData.phone || !formData.event || !formData.message) {
@@ -28,20 +28,74 @@ export default function Contact() {
       return;
     }
 
-    // Here you would typically send the form data to your backend
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for your inquiry. We'll get back to you soon.",
-    });
+    // Create email body with all form details
+    const emailBody = `Dear AnnRaaj Catering Services,
 
-    // Reset form
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      event: '',
-      message: ''
-    });
+I am interested in your catering services. Here are my details:
+
+Name: ${formData.name}
+Email: ${formData.email}
+Phone: ${formData.phone}
+Event Type: ${formData.event}
+
+Message:
+${formData.message}
+
+Please get in touch with me to discuss further.
+
+Best regards,
+${formData.name}`;
+
+    try {
+      // Using a free form service that doesn't require API keys
+      const response = await fetch('https://formsubmit.co/ajax/info@annraajcatering.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          event_type: formData.event,
+          message: formData.message,
+          _subject: `New Catering Inquiry from ${formData.name}`,
+          _captcha: 'false'
+        }),
+      });
+
+      if (response.ok) {
+        toast({
+          title: "Message Sent Successfully!",
+          description: "Thank you for your inquiry. We'll get back to you within 24 hours.",
+        });
+      } else {
+        throw new Error('Form submission failed');
+      }
+    } catch (error) {
+      // Fallback to mailto if the service fails
+      const subject = `Catering Inquiry from ${formData.name}`;
+      const mailtoLink = `mailto:info@annraajcatering.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
+      
+      window.location.href = mailtoLink;
+      
+      toast({
+        title: "Email Client Opened!",
+        description: "Please send the email to complete your inquiry, or call us at 9879381605.",
+      });
+    }
+
+    // Reset form after a short delay
+    setTimeout(() => {
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        event: '',
+        message: ''
+      });
+    }, 2000);
   };
 
   const handleCallNow = () => {
