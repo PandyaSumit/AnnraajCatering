@@ -1,5 +1,6 @@
 import { Phone, Mail, Award, Users, Utensils } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Logo from "@/components/logo";
 
 export default function Hero() {
   const handleCallNow = () => {
@@ -23,6 +24,9 @@ export default function Hero() {
       
       <div className="max-w-6xl mx-auto px-4 relative">
         <div className="text-center">
+          <div className="flex justify-center mb-8">
+            <Logo className="w-24 h-24 lg:w-32 lg:h-32" />
+          </div>
           <h1 className="text-5xl lg:text-7xl font-bold text-gray-800 mb-6">
             <span className="text-primary">Annraaj</span> Catering
             <br />

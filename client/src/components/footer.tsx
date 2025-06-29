@@ -1,4 +1,5 @@
 import { Facebook, Instagram, Youtube } from "lucide-react";
+import Logo from "@/components/logo";
 
 export default function Footer() {
   const scrollToSection = (sectionId: string) => {
@@ -14,9 +15,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div>
             <div className="flex items-center space-x-3 mb-4">
-              <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold">AL</span>
-              </div>
+              <Logo className="w-10 h-10" />
               <h3 className="text-xl font-bold">Annraaj Catering</h3>
             </div>
             <p className="text-gray-300 mb-4">

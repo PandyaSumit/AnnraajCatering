@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Logo from "@/components/logo";
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -18,11 +19,9 @@ export default function Header() {
       <div className="max-w-6xl mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-3">
-            <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">AL</span>
-            </div>
+            <Logo className="w-12 h-12" />
             <div>
-              <h1 className="text-2xl font-bold text-gray-800">Annraaj Logo</h1>
+              <h1 className="text-2xl font-bold text-gray-800">Annraaj</h1>
               <p className="text-sm text-gray-600">Catering Services</p>
             </div>
           </div>
