@@ -1,47 +1,17 @@
 import React, { useState } from "react";
 import { jsPDF } from "jspdf";
 import { Download } from "lucide-react";
-
-// Data structure for menu items grouped by category
-const categorizedMenuItems = {
-    "Gujarati Thali": [
-        { id: 1, name: "Undhiyu", pricePerPerson: 120, description: "Mixed seasonal veggies in spicy curry." },
-        { id: 2, name: "Bhakri", pricePerPerson: 30, description: "Traditional Gujarati flatbread." },
-        { id: 3, name: "Shrikhand", pricePerPerson: 60, description: "Sweetened hung curd dessert." },
-    ],
-    "Fast Food": [
-        { id: 4, name: "Pav Bhaji", pricePerPerson: 90, description: "Spicy mashed veggie curry with bread." },
-        { id: 5, name: "Paneer Pizza", pricePerPerson: 120, description: "Cheesy pizza topped with paneer." },
-    ],
-    "Desserts": [
-        { id: 6, name: "Gulab Jamun", pricePerPerson: 50, description: "Syrupy deep-fried sweet balls." },
-        { id: 7, name: "Rasmalai", pricePerPerson: 70, description: "Soft cheese patties in sweetened milk." },
-    ],
-    "Beverages": [
-        { id: 8, name: "Masala Chaas", pricePerPerson: 20, description: "Spiced buttermilk drink." },
-        { id: 9, name: "Mango Lassi", pricePerPerson: 40, description: "Sweet mango yogurt shake." },
-    ],
-};
-
-type Category = keyof typeof categorizedMenuItems;
+import { categorizedMenuItems, getItemById, type Category } from "../lib/menuData";
 
 export const MenuPage: React.FC = () => {
     const [guests, setGuests] = useState<number>(1);
-    const [selectedItems, setSelectedItems] = useState<number[]>([]);
-    const [activeCategory, setActiveCategory] = useState<Category>("Gujarati Thali");
+    const [selectedItems, setSelectedItems] = useState<string[]>([]);
+    const [activeCategory, setActiveCategory] = useState<Category>("Starters");
 
-    const toggleItem = (id: number) => {
+    const toggleItem = (id: string) => {
         setSelectedItems((prev) =>
             prev.includes(id) ? prev.filter((item) => item !== id) : [...prev, id]
         );
-    };
-
-    const getItemById = (id: number) => {
-        for (const category in categorizedMenuItems) {
-            const found = categorizedMenuItems[category as Category].find((item) => item.id === id);
-            if (found) return found;
-        }
-        return null;
     };
 
     const generatePDF = () => {
